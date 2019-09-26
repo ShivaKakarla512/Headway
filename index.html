@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <title>Head Way - Barber Salon</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+    html {
+    	scroll-behavior: smooth;
+    }
+    body {
+        position: relative;
+    }
+    a {
+      font-family: Raleway;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    #title span {
+      font-size: 150px;
+      position: relative;
+    }
+    #title span, p {
+      position: relative;
+      color: white;
+    }
+    #title p {
+      font-size:40px;
+    }
+    #title {
+      height: 60vh;
+      max-width: 100%;
+      background-image: url('Images/barber-min.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #title::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .brand {
+      font-family: Raleway;
+      font-weight: 900;
+      font-size: 25px;
+    }
+    .back {
+      background-color: white;
+    }
+    .container {
+      padding-top: 70px;
+    }
+    .submit:hover {
+      background-color: #c2e59c;
+      border-width: 0;
+    }
+    .carousel-inner img {
+      width: 50%;
+      height: 100%;
+    }
+    #overlay {
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+    video {
+      width: 100%;
+      height: auto;
+    }
+    .bruh a img:hover{
+      transform: scale(1.3, 1.3);
+    }
+
+    .card:hover {
+      color: cornflowerblue;
+    }
+
+    .mission h2 {
+      font-size: 45px;
+    }
+
+    .idk h3 {
+      font-size: 30px;
+    }
+
+    .carousel-indicators {
+      top: 95%;
+    }
+
+    .title h1 {
+      font-size:65px;
+    }
+
+    hr {
+      width:50%;
+    }
+
+    .sub h2 {
+      font-size: 35px;
+    }
+
+    .sub h2 span {
+      font-size: 25px;
+    }
+
+    .sub h4 {
+      font-size: 25px;
+    }
+
+    .sub p {
+      font-size: 25px;
+    }
+
+    .sub h3 {
+      font-size: 25px;
+    }
+
+    .sub .subsub {
+      font-size: 20px;
+    }
+
+    .sub .h2 {
+      font-size: 25px;
+    }
+
+    .title a {
+      top: 10%;
+    }
+
+    .title .second {
+      float: right;
+    }
+
+    .pad {
+      padding-top: 0px;
+      margin-top: 0px;
+    }
+
+    @media screen and (max-width: 468px) {
+      #title span {
+        font-size: 60px;
+      }
+
+      #title p {
+        padding-top: 10px;
+        font-size:20px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .mission h2 {
+        font-size: 25px;
+      }
+
+      .idk h3 {
+        font-size: 20px;
+      }
+
+      a {
+        font-size: 15px;
+      }
+
+      .title h1 {
+        font-size:40px;
+      }
+
+      .sub h2 {
+        font-size: 25px;
+      }
+
+      .sub h2 span {
+        font-size: 15px;
+      }
+
+      .sub h4 {
+        font-size: 15px;
+      }
+
+      .sub p {
+        font-size: 15px;
+      }
+
+      .sub h3 {
+        font-size: 15px;
+      }
+
+      .sub .subsub {
+        font-size: 15px;
+      }
+
+      .sub .h2 {
+        font-size: 15px;
+      }
+
+      .title a {
+        top: 12%;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 50%;
+      }
+
+      .title .second {
+        float: bottom;
+      }
+
+      .carousel-indicators {
+        top: 95%;
+      }
+
+      .pad {
+        padding-top: 0px;
+        margin-top: -55px;
+      }
+      #title {
+        height: 60vh;
+      }
+    }
+
+    @media (min-width: 460px) and (max-width: 767px) {
+      #title span {
+        font-size: 100px;
+      }
+
+      #title p {
+        font-size:30px;
+      }
+
+      .mission h2 {
+        font-size: 30px;
+      }
+
+      .idk h3 {
+        font-size: 25px;
+      }
+
+      a {
+        font-size: 15px;
+      }
+
+      .title h1 {
+        font-size:55px;
+      }
+
+      .sub h2 {
+        font-size: 30px;
+      }
+
+      .sub h2 span {
+        font-size: 20px;
+      }
+
+      .sub h4 {
+        font-size: 20px;
+      }
+
+      .sub p {
+        font-size: 20px;
+      }
+
+      .sub h3 {
+        font-size: 20px;
+      }
+
+      .sub .subsub {
+        font-size: 15px;
+      }
+
+      .sub .h2 {
+        font-size: 20px;
+      }
+
+      .title a {
+        top: 10%;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 50%;
+      }
+
+      .title .second {
+        float: bottom;
+      }
+
+      .carousel-indicators {
+        top: 97%;
+      }
+
+      #title {
+        height: 60vh;
+      }
+
+      .pad {
+        padding-top: 0px;
+        margin-top: -30px;
+      }
+    }
+
+    @media (min-width: 767px) and (max-width: 991px) {
+      .mission h2 {
+        font-size: 35px;
+      }
+
+      .pad {
+        padding-top: 0px;
+        margin-top: -30px;
+      }
+
+      #title {
+        height: 60vh;
+      }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #title {
+        height: 60vh;
+      }
+
+      .pad {
+        padding-top: 0px;
+        margin-top: -30px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      #title {
+        height: 60vh;
+      }
+    }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="mybody">
+      <div id="title" class="jumbotron d-flex align-items-center mb-0">
+        <div class="container text-center" style="padding-bottom:30px;">
+      		<span class="align-text-bottom text head"></span>
+          <span class="align-top head" style="font-family:Lobster;color:slategrey;text-shadow: 0 0 3px black">Head</span>
+          <span class="align-baseline head" style="font-family:Lobster;color:slategrey;text-shadow: 0 0 3px black">Way</span>
+          <p style="margin-bottom: 50px;margin-top:-20px;color:red;font-family:Raleway; font-weight: 900;">Barber Salon</p>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item wow">
+                  <a class="nav-link left" href="#services">Shop Details</a>
+              </li>
+              <li class="nav-item wow">
+                  <a class="nav-link left" href="#reviews">About</a>
+              </li>
+          </ul>
+      </div>
+      <div class="mx-auto order-0">
+          <a class="navbar-brand mx-0 brand" href="#">Jerald</a>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item wow">
+                  <a class="nav-link right" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item wow">
+                  <a class="nav-link right" href="#contact">Contact</a>
+              </li>
+          </ul>
+          <!--
+          <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" id="myInput"   type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+
+          <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#mybody *").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+          </script>
+          -->
+      </div>
+      <button class="navbar-toggler ml-n5" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      </nav>
+
+      <div class="container-fluid back pad" style="padding-bottom:70px;position: relative;">
+        <div style="position: relative;"class="container text-center pb-sm-5 mission">
+          <h2 data-aos="fade-down" style="font-family:Lobster;">Serving the great people of Killeen, Texas with our high-quality barber and salon services!</h2>
+        </div>
+        <div class="container text-center pb-sm-5 idk">
+          <h3 data-aos="fade-down" style="font-family: Raleway;">Walk-Ins <b>Welcome</b> - Appointments <b>Guaranteed</b></h3>
+        </div>
+        <div class="container pb-sm-5" style="margin-bottom:30px;">
+            <video data-aos="fade-down" controls preload autoplay>
+                <source src="intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+      </div>
+
+      <div id="services" class="container-fluid back pad" style="padding-bottom:70px;position: relative;">
+        <div class="container title">
+          <h1 data-aos="fade-down" style="color:#19547b;font-family:Raleway;font-weight:900;text-align:center;">Shop Details</h1>
+          <hr style="border-width:2px;">
+        </div>
+        <div class="container text-center sub">
+          <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:30px;">
+            Services and Prices
+            <br>
+            <span data-aos="fade-down" style="color:black;font-family:Raleway;font-weight:100;text-align:center;padding-bottom:30px;">(Subject to Change)</span>
+          </h2>
+          <div class="card-columns" style="padding-top:40px;padding-bottom:50px;">
+            <div data-aos="fade-down" class="card bg-light hover" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Haircut (Regular)
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$20</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Shave
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$15</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Razor Fade
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$25</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Bead Trim
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$10</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Designer Cut
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$25</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;" >
+              <div class="card-body text-center">
+                <h4 style="font-family: Raleway; font-weight: 900;" class="card-title">
+                  Braiding
+                </h4>
+                <p style="color:black;font-family: Raleway; font-weight: 100;" class="card-text">$45</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center sub">
+          <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:30px;">
+            Cancellation Policy
+          </h2>
+          <h3 data-aos="fade-down" style="font-family: Raleway; font-weight: 200px;word-spacing: 3px; padding-bottom: 10px;">
+            Cancellations are valid up to <b>2 hours</b> before the start time of your appointment.
+            Cancellations less than 2 hours before the start time or failure to show will result in being charged <b>$10</b> on top of your next scheduled service.
+          </h3>
+        </div>
+
+        <div class="container text-center sub">
+          <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:30px;">
+            Up-Charge Policy
+          </h2>
+          <h3 data-aos="fade-down" style="font-family: Raleway; font-weight: 200px;word-spacing: 3px; padding-bottom: 10px;">
+            Any service performed <b>past the scheduled closing time</b> is subject to a surcharge.
+          </h3>
+        </div>
+      </div>
+
+      <div id="reviews" class="container-fluid back title" style="padding-top:60px;padding-bottom:70px;position: relative;">
+        <h1 data-aos="fade-down" style="color:#19547b;font-family:Raleway;font-weight:900;text-align:center;">About</h1>
+        <hr style="border-width:2px;">
+        <div class="container">
+          <!-- <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-size: 35px;font-weight:900;text-align:center;padding-bottom:30px;">Barbers</h2>
+          <div class="card-columns" style="padding-top:40px;padding-bottom:100px;">
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar1-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar2-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar3-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar4-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar5-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-down" class="card bg-light" style="padding:10px;">
+              <img class="card-img-top img-fluid" src="Images/avatar6-min.png  " alt="Card image" width="100%" height="100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">John Doe</h4>
+                <p style="color:black;" class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              </div>
+            </div>
+        </div> -->
+          <div class="row sub">
+            <div class="col-sm-4" style="padding-bottom:50px;">
+              <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:30px;">Contact</h2>
+              <span data-aos="fade-down" style="font-family:Raleway;font-weight:bold;">Jerald</span><br>
+              <span class="subsub" data-aos="fade-down" style="font-family:Raleway;">254-432-8880</span>
+
+            </div>
+            <div class="col-sm-4" style="padding-bottom:50px;">
+              <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:30px;">Location</h2>
+              <span data-aos="fade-down" style="font-family:Raleway;font-weight:bold;">Address:</span><br>
+              <span class="subsub" data-aos="fade-down" style="font-family:Raleway;">1803 Grandon Drive</span><br>
+              <span class="subsub" data-aos="fade-down" style="font-family:Raleway;">Suite 101</span><br>
+              <span class="subsub" data-aos="fade-down" style="font-family:Raleway;">Killeen, TX, 76541</span><br>
+            </div>
+            <div class="col-sm-4">
+              <h2 data-aos="fade-down" style="color:#6A5ACD;font-family:Raleway;font-weight:900;text-align:center;padding-bottom:20px;">Business Hours</h2>
+              <table class="table table-hover table-borderless">
+                <tbody>
+                  <tr>
+                    <td class="h2" data-aos="fade-down" style="font-family:Raleway;font-weight:bold;">Mon-Fri: </td>
+                    <td class="subsub" data-aos="fade-down" style="font-family:Raleway;padding-left:10px;">9 AM - 7 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="h2" data-aos="fade-down" style="font-family:Raleway;font-weight:bold;">Sat: </td>
+                    <td class="subsub" data-aos="fade-down" style="font-family:Raleway;padding-left:10px;">10 AM - 6 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="h2" data-aos="fade-down" style="font-family:Raleway;font-weight:bold;">Sun: </td>
+                    <td class="subsub" data-aos="fade-down" style="font-family:Raleway;padding-left:10px;">1 PM - 6 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="gallery" class="container-fluid back title" style="padding-top:60px;padding-bottom:70px;position: relative;">
+        <h1 data-aos="fade-down" style="color:#19547b;font-family:Raleway;font-weight:900;text-align:center;">Gallery</h1>
+        <hr style="border-width:2px;">
+        <div data-aos="fade-down" id="demo" class="carousel slide container" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div id="overlay"></div>
+              <img src="Images/three.jpg" alt="Haitstyle">
+              <img class="second" src="Images/six.jpg" alt="Haitstyle">
+            </div>
+            <div class="carousel-item">
+              <div id="overlay"></div>
+              <img src="Images/one.jpg" alt="Haitstyle">
+              <img class="second" src="Images/five.png" alt="Haitstyle">
+            </div>
+            <div class="carousel-item">
+              <div id="overlay"></div>
+              <img src="Images/four.jpg" alt="Haitstyle">
+              <img class="second" src="Images/two.jpg" alt="Haitstyle">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+      </div>
+      </div>
+      <div id="contact" class="container-fluid back title" style="padding-top:60px;padding-bottom:100px;position: relative;">
+        <h1 data-aos="fade-down" style="color:#19547b;font-family:Raleway;font-weight:900;text-align:center;">Contact</h1>
+        <hr style="border-width:2px;">
+        <div style="width:60%;" class="container">
+          <form data-aos="fade-down" id="contact-form" method="post" action="server.php">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+            <br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+            <br>
+            <textarea style="height:200px;" name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+            <br>
+            <div class="text-center" style="padding-top:20px">
+              <button id="singlebutton" name="singlebutton" class="btn btn-primary submit" style="font-family:Raleway;font-weight:bold;">SEND MESSAGE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="bruh jumbotron text-center bg-dark" style="margin-bottom:0; color:white;font-size:30px;">
+        <span class="align-text-bottom"></span>
+        <span class="align-top" style="color:white;position:relative;font-family:Lobster;">Head</span>
+        <span class="align-baseline" style="color:white;position:relative;font-family:Lobster;">Way</span>
+        <br>
+        <a style="position:relative;" href="https://www.facebook.com" target="_blank" ><img class="facebook" src="Images/facebook.png" alt="facebook" height="32px" width="32px"></a>
+        <a style="position:relative;" href="https://twitter.com" target="_blank" ><img class="twitter" src="Images/twitter.png" alt="twitter" height="36px" width="36px"></a>
+        <a style="position:relative;" href="https://gmail.com" target="_blank" ><img class="google" src="Images/google.png" alt="google" height="31px" width="31px"></a>
+      </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
